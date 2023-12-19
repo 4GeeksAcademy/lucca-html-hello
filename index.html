@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-W4I5oyhbpj8rOzexmK3mAPCA5v/4nMeWfUp9QQ5EME8bvzjO+Y8okpUdpr4TfZDkd6zXxNQ52t2O4wUZCgY4Dg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Payment Form Example</title>
+    <style>
+      .small-input .form-control {
+          font-size: 0.8rem;
+          padding: 0.375rem 0.75rem; 
+      }
+      .small-input .form-control-textarea {
+          height: auto; 
+      }
+      .smaller-right-padding {
+        padding-right: 0.25rem; 
+    }
+    .smaller-left-margin {
+        width: 95%; 
+        margin-left: 0.25rem; 
+    }
+    .smaller-left-margin {
+         
+        margin-left: 0.25rem; 
+    }
+    .centered-input {
+        margin-left: 0.25rem;
+        margin-right: auto;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container m-5">
+    <div class="border border-0">
+      <div class="border border-3 col-md-10 mx-auto my-3">
+        <div class="p-7">
+          <div class="bg-light p-2 border border-1">
+            <h3 class="mb-1 ms-2">Payment Form Example</h3>
+        </div>
+        
+   <div> 
+    <div>
+      <br>
+      <div class="alert alert-danger text-left mx-auto p-2" role="alert" style="max-width: 900px;">
+          Some fields are missing
+      </div>
+  </div>
+  
+    
+    
+    </div>
+    <div class="d-flex justify-content-between mb-3">
+        <!-- Card Number -->
+        <fieldset class="col-md-5 me-1">
+          <label for="cardNumber" class="form-label"><strong>Card #</strong></label>
+          <input type="text" class="form-control smaller-left-margin" id="cardNumber" name="cardNumber" placeholder="XXXXXXXXXXXXXXXX" required>
+      </fieldset>
+
+        <!-- CVC -->
+        <fieldset class="col-md-3 me-1">
+            <label for="cvc" class="form-label"><strong>CVC #</strong></label>
+            <input type="text" class="form-control" id="cvc" name="cvc" placeholder="0000" required>
+        </fieldset>
+
+        <!-- Amount -->
+        <fieldset class="col-md-3 me-1">
+          <label for="amount" class="form-label">Amount</label>
+          <div class="input-group">
+              <span class="input-group-prepend">
+                  <strong>$</strong>
+              </span>
+              <input type="number" class="form-control me-2 w-75" id="amount" name="amount" placeholder="Amount" required>
+          </div>
+      </fieldset>
+      
+    </div>
+</div>
+<div class="row mb-3">
+  <!-- Primer Grupo de Campos -->
+  <div class="col-md-6">
+    <div>
+      <fieldset class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control centered-input" id="firstName" name="firstName" required>
+    </fieldset>
+      <fieldset class="mb-3">
+        <label for="city" class="form-label">City</label>
+        <input type="text" class="form-control centered-input" id="city" name="city" required>
+    </fieldset>
+      <fieldset class="mb-3">
+        <label class="form-label">We accept:</label>
+        <div class="input-group mt-2">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="paymentOption" id="visa" value="visa">
+            <label class="form-check-label" for="visa">
+              <i class="fa-brands fa-cc-visa text-secondary"></i>
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="paymentOption" id="mastercard" value="mastercard">
+            <label class="form-check-label" for="mastercard">
+              <i class="fa-brands fa-cc-mastercard text-secondary ms-2"></i>
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="paymentOption" id="discover" value="discover">
+            <label class="form-check-label" for="discover">
+              <i class="fa-brands fa-cc-discover text-secondary ms-2"></i>
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="paymentOption" id="amex" value="amex">
+            <label class="form-check-label" for="amex">
+              <i class="fa-brands fa-cc-amex text-secondary ms-2"></i>
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <!-- Segundo Grupo de Campos -->
+  <div class="col-md-6">
+    <div>
+      <fieldset class="mb-1">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control smaller-left-margin" id="lastName" name="lastName" required>
+    </fieldset>
+      <div class="d-flex">
+          <fieldset class="mb-3 me-2 flex-fill">
+              <label for="state" class="form-label">Pick a state</label>
+              <input type="number" class="form-control" id="state" name="state" placeholder="Pick a state" required>
+          </fieldset>
+          <fieldset class="mb-3 flex-fill me-4">
+            <label for="postalCode" class="form-label">Postal Code</label>
+            <input type="text" class="form-control" id="postalCode" name="postalCode" required>
+        </fieldset>
+      </div>
+      <fieldset class="mb-3 ml-1">
+        <label for="exampleFormControlTextarea1" class="form-label" style="margin-right: 0.25rem;">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
+        <p class="mt-1 small">Add any notes here</p>
+    </fieldset>
+    </div>
+  </div>
+</div>
+      <!-- Botones de acción -->
+      <div class="bg-light p-2 border border-1">
+        <h3 class="mb-1 d-flex justify-content-end">
+            <button type="button" class="btn btn-cancel me-2">Cancel</button>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </h3>
+    </div>
+        </div>
+      </div>
+  </div>
+</div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
